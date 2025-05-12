@@ -5,8 +5,7 @@ namespace TransportationSystem
 {
     public partial class LoginWindow : Window
     {
-        private string connectionString = "Server=your_server;Database=TransportationDB;Trusted_Connection=True;";
-
+        private string connectionString = "Server=XDTUF;Database=TransportationDB;Trusted_Connection=True;";
         public LoginWindow()
         {
             InitializeComponent();
@@ -19,7 +18,7 @@ namespace TransportationSystem
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "SELECT COUNT(*) FROM Users WHERE Email = @Email AND Password = @Password";
+                    string query = "SELECT COUNT(*) FROM [User] WHERE Email = @Email AND Password = @Password";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Email", EmailTextBox.Text);
