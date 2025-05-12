@@ -28,7 +28,7 @@ namespace TransportationSystem
                         if (count > 0)
                         {
                             MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                            UserDashboardWindow userDashboard = new UserDashboardWindow();
+                            UserDashboardWindow userDashboard = new UserDashboardWindow(EmailTextBox.Text); // Pass the email
                             userDashboard.Show();
                             this.Close();
                         }
