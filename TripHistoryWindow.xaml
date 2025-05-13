@@ -1,0 +1,23 @@
+﻿<Window x:Class="TransportationSystem.TripHistoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Trip History" Height="500" Width="600"
+        WindowStartupLocation="CenterScreen" Background="{StaticResource PrimaryBackground}">
+    <Grid Margin="20">
+        <Border Background="{StaticResource CardBackground}" CornerRadius="10" Padding="20">
+            <StackPanel>
+                <TextBlock Text="Trip History" Style="{StaticResource ModernTextBlock}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                <ListView x:Name="TripListView" Style="{StaticResource ModernListView}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Pick-Up" Width="150" DisplayMemberBinding="{Binding PickUp}"/>
+                            <GridViewColumn Header="Destination" Width="150" DisplayMemberBinding="{Binding Destination}"/>
+                            <GridViewColumn Header="Pick-Up Date" Width="150" DisplayMemberBinding="{Binding PickDate, StringFormat={}{0:yyyy-MM-dd HH:mm}}"/>
+                            <GridViewColumn Header="Duration" Width="100" DisplayMemberBinding="{Binding Duration}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

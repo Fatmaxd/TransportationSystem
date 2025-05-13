@@ -6,9 +6,12 @@ namespace TransportationSystem
     public partial class LoginWindow : Window
     {
         private string connectionString = "Server=XDTUF;Database=TransportationDB;Trusted_Connection=True;";
-        public LoginWindow()
+        private MainWindow mainWindow;
+
+        public LoginWindow(MainWindow mainWindow)
         {
             InitializeComponent();
+            this.mainWindow = mainWindow;
         }
 
         private void LoginSubmitButton_Click(object sender, RoutedEventArgs e)
@@ -22,14 +25,14 @@ namespace TransportationSystem
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Email", EmailTextBox.Text);
-                        cmd.Parameters.AddWithValue("@Password", PasswordBox.Password); // Hash in production
+                        cmd.Parameters.AddWithValue("@Password", PasswordBox.Password);
                         int count = (int)cmd.ExecuteScalar();
 
                         if (count > 0)
                         {
                             MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                            UserDashboardWindow userDashboard = new UserDashboardWindow(EmailTextBox.Text); // Pass the email
-                            userDashboard.Show();
+                            mainWindow.SetLoggedInUser(EmailTextBox.Text);
+                            mainWindow.ShowMainWindow();
                             this.Close();
                         }
                         else

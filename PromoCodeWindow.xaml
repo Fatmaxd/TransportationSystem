@@ -1,0 +1,16 @@
+﻿<Window x:Class="TransportationSystem.PromoCodeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Apply Promo Code" Height="400" Width="400"
+        WindowStartupLocation="CenterScreen" Background="{StaticResource PrimaryBackground}">
+    <Grid Margin="20">
+        <Border Background="{StaticResource CardBackground}" CornerRadius="10" Padding="20">
+            <StackPanel>
+                <TextBlock Text="Apply Promo Code" Style="{StaticResource ModernTextBlock}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                <TextBlock Text="Promo Code" Style="{StaticResource ModernTextBlock}"/>
+                <TextBox x:Name="PromoCodeTextBox" Style="{StaticResource ModernTextBox}" Width="300"/>
+                <Button Content="Apply Promo" Style="{StaticResource ModernButton}" Click="ApplyPromoButton_Click" Width="200" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

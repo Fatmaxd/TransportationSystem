@@ -1,0 +1,29 @@
+<Window x:Class="TransportationSystem.SignUpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sign Up" Height="678" Width="398"
+        WindowStartupLocation="CenterScreen" Background="{StaticResource PrimaryBackground}">
+    <Grid Margin="20">
+        <Border Background="{StaticResource CardBackground}" CornerRadius="10" Padding="20">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Sign Up" Style="{StaticResource ModernTextBlock}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                <TextBlock Text="First Name" Style="{StaticResource ModernTextBlock}"/>
+                <TextBox x:Name="FirstNameTextBox" Style="{StaticResource ModernTextBox}" Width="300"/>
+                <TextBlock Text="Last Name" Style="{StaticResource ModernTextBlock}" Margin="0,10,0,0"/>
+                <TextBox x:Name="LastNameTextBox" Style="{StaticResource ModernTextBox}" Width="300"/>
+                <TextBlock Text="Email" Style="{StaticResource ModernTextBlock}" Margin="0,10,0,0"/>
+                <TextBox x:Name="EmailTextBox" Style="{StaticResource ModernTextBox}" Width="300"/>
+                <TextBlock Text="Password" Style="{StaticResource ModernTextBlock}" Margin="0,10,0,0"/>
+                <PasswordBox x:Name="PasswordBox" Style="{StaticResource ModernPasswordBox}" Width="300"/>
+                <TextBlock Text="Phone" Style="{StaticResource ModernTextBlock}" Margin="0,10,0,0"/>
+                <TextBox x:Name="PhoneTextBox" Style="{StaticResource ModernTextBox}" Width="300"/>
+                <TextBlock Text="Gender" Style="{StaticResource ModernTextBlock}" Margin="0,10,0,0"/>
+                <ComboBox x:Name="GenderComboBox" Style="{StaticResource ModernComboBox}" Width="300">
+                    <ComboBoxItem Content="Male" Tag="M"/>
+                    <ComboBoxItem Content="Female" Tag="F"/>
+                </ComboBox>
+                <Button Content="Sign Up" Style="{StaticResource ModernButton}" Click="SignUpButton_Click" Width="200" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

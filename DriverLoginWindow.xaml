@@ -1,0 +1,18 @@
+﻿<Window x:Class="TransportationSystem.DriverLoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Driver Login" Height="400" Width="400"
+        WindowStartupLocation="CenterScreen" Background="{StaticResource PrimaryBackground}">
+    <Grid Margin="20">
+        <Border Background="{StaticResource CardBackground}" CornerRadius="10" Padding="20">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Driver Login" Style="{StaticResource ModernTextBlock}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                <TextBlock Text="Phone" Style="{StaticResource ModernTextBlock}"/>
+                <TextBox x:Name="PhoneTextBox" Style="{StaticResource ModernTextBox}" Width="300"/>
+                <TextBlock Text="Driver License" Style="{StaticResource ModernTextBlock}" Margin="0,10,0,0"/>
+                <TextBox x:Name="DriverLicenseTextBox" Style="{StaticResource ModernTextBox}" Width="300"/>
+                <Button Content="Login" Style="{StaticResource ModernButton}" Click="DriverLoginButton_Click" Width="200" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

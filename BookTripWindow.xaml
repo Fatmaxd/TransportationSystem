@@ -1,0 +1,24 @@
+﻿<Window x:Class="TransportationSystem.BookTripWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Book a Trip" Height="621" Width="391"
+        WindowStartupLocation="CenterScreen" Background="{StaticResource PrimaryBackground}">
+    <Grid Margin="20">
+        <Border Background="{StaticResource CardBackground}" CornerRadius="10" Padding="20">
+            <StackPanel>
+                <TextBlock Text="Book a Trip" Style="{StaticResource ModernTextBlock}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                <TextBlock Text="Pick-Up Location" Style="{StaticResource ModernTextBlock}"/>
+                <TextBox x:Name="PickUpTextBox" Style="{StaticResource ModernTextBox}" Width="300"/>
+                <TextBlock Text="Destination" Style="{StaticResource ModernTextBlock}" Margin="0,10,0,0"/>
+                <TextBox x:Name="DestinationTextBox" Style="{StaticResource ModernTextBox}" Width="300"/>
+                <TextBlock Text="Pick-Up Date" Style="{StaticResource ModernTextBlock}" Margin="0,10,0,0"/>
+                <DatePicker x:Name="PickDatePicker" Style="{StaticResource ModernDatePicker}" Width="300"/>
+                <TextBlock Text="Pick-Up Time" Style="{StaticResource ModernTextBlock}" Margin="0,10,0,0"/>
+                <TextBox x:Name="PickTimeTextBox" Style="{StaticResource ModernTextBox}" Width="300" Text="08:00" ToolTip="Enter time (HH:mm)"/>
+                <TextBlock Text="Estimated Fees" Style="{StaticResource ModernTextBlock}" Margin="0,10,0,0"/>
+                <TextBox x:Name="FeesTextBox" Style="{StaticResource ModernTextBox}" Width="300" Text="50" IsReadOnly="True"/>
+                <Button Content="Confirm Booking" Style="{StaticResource ModernButton}" Click="ConfirmBookingButton_Click" Width="200" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
